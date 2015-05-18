@@ -47,16 +47,23 @@ else{
 	var inputPath = process.argv[2].replace(/\/+$/, "")+"/",
 		outputPath = process.argv[3].replace(/\/+$/, "")+"/"
 
+	if(inputPath.substr(0,1) != "/"){
+		inputPath = basePath + inputPath;
+	}
+	if(outputPath.substr(0,1) != "/"){
+		outputPath = basePath + outputPath;
+	}
+
 	console.log("Starting email processing",inputPath,outputPath);
 
-	fs.lstat(basePath+inputPath, function(err, stats) {
+	fs.lstat(inputPath, function(err, stats) {
 		if (!err && stats.isDirectory()){
-	    	parseInput(basePath+inputPath,basePath+outputPath,"")
+	    	parseInput(inputPath,outputPath,"")
 		}
 	})
-	fs.lstat(basePath+outputPath, function(err, stats) {
+	fs.lstat(outputPath, function(err, stats) {
 		if (err || !stats.isDirectory()) {
-			console.error("Invalid output directory!",basePath+outputPath)
+			console.error("Invalid output directory!",outputPath)
 			process.kill()
 		}
 	})
