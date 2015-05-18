@@ -55,7 +55,7 @@ else{
 		}
 	})
 	fs.lstat(basePath+outputPath, function(err, stats) {
-		if (!err && stats.isDirectory()) {
+		if (err || stats.isDirectory()) {
 			console.error("Invalid output directory!",basePath+outputPath)
 			process.kill()
 		}
