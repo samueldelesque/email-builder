@@ -1,6 +1,6 @@
 {
-  "name": "email-templates",
-  "version": "0.0.0",
+  "name": "ds-email-builder",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
