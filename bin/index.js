@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 var juice = require('juice2'),
 	fs = require('fs'),
 	http = require('http'),
