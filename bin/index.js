@@ -5,7 +5,7 @@ var juice = require('juice2'),
 	watch = require('node-watch'),
 	disregardFiles = [".DS_Store",".hide",".git",".deleteme","css","less","scss","sass"],
 	routes = {},
-	port = 3000,
+	port = 3729,
 	basePath = process.cwd()+"/"
 
 

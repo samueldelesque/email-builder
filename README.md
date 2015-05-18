@@ -15,7 +15,7 @@ To get started, install the email compiler module as follows:
 
 *Writing the HTML*
 
-Templates in the `/templates` directory should now show up in the browser at http://localhost:3000/
+Templates in the `/templates` directory should now show up in the browser at http://localhost:3729/
 
 The rendered HTML is simply spit out in the browser - you can use the source to copy paste into MailChimp/Litmus or other testing platform.
 
