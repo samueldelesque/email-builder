@@ -8,6 +8,11 @@ var juice = require('juice2'),
 	port = 3729,
 	basePath = process.cwd()+"/"
 
+console.log("\x1B[36m");
+console.log("");
+console.log("           DS EMAIL BUILDER");
+console.log("");
+console.log("\x1B[0m");
 
 function renderTemplate(inputdir,outputdir,path){
 	juice(inputdir+path, function(err, html) {
