@@ -14,7 +14,7 @@ console.log("");
 console.log("\x1B[0m");
 
 function renderTemplate(inputdir,outputdir,path){
-	juice(inputdir+path, function(err, html) {
+	juice(inputdir+path, {preserveMediaQueries: true, url: "http://domanistudios.com/"}, function(err, html) {
 		if(err){console.log(path,"Path not found");}
 		routes["/"+path] = html
 		fs.writeFile(outputdir+path, html, function(err){
