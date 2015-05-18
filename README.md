@@ -9,6 +9,7 @@ To get started, install the email compiler module as follows:
 * ```npm install ds-email-builder -g```
 * You can then go into your project folder which should contain a source and dest directory
 * run ```ds-email-builder source dest```
+* `Note: You can use both relative and absolute paths.`
 * The module now serves the templates on http://localhost:3000/emailpath.html as well as having the html written in the output dir.
 
 
