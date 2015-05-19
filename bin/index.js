@@ -2,10 +2,10 @@
 var juice = require('juice2'),
 	fs = require('fs-extra'),
 	http = require('http'),
-	// staticServer = require('node-static'),
+	staticServer = require('node-static'),
 	Watch = require('node-watch'),
 	disregardFiles = [".DS_Store",".hide",".git",".deleteme","css","less","scss","sass"],
-	routes = {},
+	open = require("open"),
 	port = 3729,
 	basePath = process.cwd()+"/",
 	module_path = __dirname.replace("bin",""),
@@ -16,7 +16,9 @@ var Emailizer = {
 		inputdir: "",
 		outputdir: ""
 	},
-	staticServer: {},
+	staticServer: false,
+	windowOpen: false,
+	routes: [],
 
 	init: function(){
 		var s = this
@@ -27,16 +29,20 @@ var Emailizer = {
 		console.log("\x1B[0m");
 	},
 
-	renderTemplate: function(path){
+	renderTemplate: function(path,then){
 		var s = this
 		juice(s.settings.inputdir+path, function(err, html) {
 			if(err){console.log(path,"Path not found");}
-			// routes["/"+path] = html
 			fs.writeFile(s.settings.outputdir+path, html, function(err){
 				if(err){
 					console.error("Failed to write",s.settings.outputdir+path,"!");
 				}
 				else{
+					if(s.routes.indexOf(path) == -1) s.routes.push(path)
+					if(s.staticServer && !s.windowOpen){
+						open("http://localhost:"+port+"/"+path)
+						s.windowOpen = true
+					}
 					console.log(s.settings.outputdir+path,"was rendered.")
 				}
 			})
@@ -61,7 +67,7 @@ var Emailizer = {
 	},
 	serveRender: function(){
 		var s = this
-		s.staticServer = new static.Server(s.settings.outputdir)
+		s.staticServer = new staticServer.Server(s.settings.outputdir)
 
 		http.createServer(function (req, res) {
 			req.addListener('end', function () {
@@ -137,7 +143,10 @@ else{
  					else{
  						fs.mkdirs(newdir+"render", function(err){
  							if(err)console.error(err)
- 							else Emailizer.watch(newdir+"source/",newdir+"render/")
+ 							else{
+ 								Emailizer.watch(newdir+"source/",newdir+"render/")
+ 								Emailizer.serveRender()
+ 							}
  						})
  					}
 				})
