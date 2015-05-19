@@ -1,5 +1,7 @@
+-----------------------------------------------------------
 
 A Node.js module to compile html emails with inline styles. 
+
 -----------------------------------------------------------
 
 ### Getting started

@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 var juice = require('juice2'),
-	fs = require('fs'),
+	fs = require('fs-extra'),
 	http = require('http'),
 	// staticServer = require('node-static'),
 	Watch = require('node-watch'),
@@ -8,6 +8,7 @@ var juice = require('juice2'),
 	routes = {},
 	port = 3729,
 	basePath = process.cwd()+"/",
+	module_path = __dirname.replace("bin",""),
 	usage = ["watch","create"]
 
 var Emailizer = {
@@ -58,18 +59,18 @@ var Emailizer = {
 			})
 		})
 	},
-	// serveRender: function(){
-	// 	var s = this
-	// 	s.staticServer = new static.Server(s.settings.outputdir)
+	serveRender: function(){
+		var s = this
+		s.staticServer = new static.Server(s.settings.outputdir)
 
-	// 	http.createServer(function (req, res) {
-	// 		req.addListener('end', function () {
-	// 			s.staticServer.serve(req, res);
-	// 		}).resume()
-	// 	}).listen(port)
+		http.createServer(function (req, res) {
+			req.addListener('end', function () {
+				s.staticServer.serve(req, res);
+			}).resume()
+		}).listen(port)
 
-	// 	console.log("App files are now served on port "+port);
-	// },
+		console.log("App files are now served on port "+port);
+	},
 
 
 	watch: function(inputdir,outputdir){
@@ -85,7 +86,7 @@ if(!process.argv[2] || process.argv[2] == "help" || usage.indexOf(process.argv[2
 	console.log("");
 	console.log("usage: emailizer [create NAME] [watch ./SOURCE ./DEST]");
 	console.log("");
-	process.kill()
+	process.exit()
 }
 else{
 
@@ -94,7 +95,7 @@ else{
 	if(process.argv[2] == "watch"){
 		if(!process.argv[3] || !process.argv[4]){
 			console.error("Please specify a valid SOURCE and DEST directory")
-			process.kill()
+			process.exit()
 		}
 		else{
 			var source = process.argv[3].replace(/\/+$/, "")+"/",
@@ -115,12 +116,32 @@ else{
 			fs.lstat(dest, function(err, stats) {
 				if (err || !stats.isDirectory()) {
 					console.error("Invalid output directory!",dest)
-					process.kill()
+					process.exit()
 				}
 			})
 		}
 	}
 	else if(process.argv[2] == "create"){
-		console.log("Create function is under construction....");
+		// console.log("Create function is under construction....");
+		// console.log(module_path);
+		if(!process.argv[3]){
+			console.error("Please specify a valid email name")
+			process.exit()
+		}
+		else{
+			var newdir = process.argv[3].replace(/\/+$/, "")+"/"
+			fs.mkdirs(newdir,function(err){
+				if(err) console.log(err)
+				else fs.copy(module_path+"source",newdir+"source",function(err){
+ 					if (err) return console.error(err)
+ 					else{
+ 						fs.mkdirs(newdir+"render", function(err){
+ 							if(err)console.error(err)
+ 							else Emailizer.watch(newdir+"source/",newdir+"render/")
+ 						})
+ 					}
+				})
+			})
+		}
 	}
 }
