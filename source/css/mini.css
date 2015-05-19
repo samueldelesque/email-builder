@@ -1,0 +1,19 @@
+@media only screen and (max-width: 320px){
+  table[class="body"] .columns.m-half,
+  table[class="body"] .column.m-half {
+    table-layout: fixed !important;
+    float: left !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  table[class="body"] .columns.m-half.m-padded-left,
+  table[class="body"] .column.m-half.m-padded-left {
+    padding-left:0 !important;
+    width: 100% !important;
+  }
+  table[class="body"] .columns.m-half.m-padded-right,
+  table[class="body"] .column.m-half.m-padded-right {
+    padding-right:0 !important;
+    width: 100% !important;
+  }
+}

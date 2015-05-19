@@ -1,27 +1,36 @@
-#### DS EMAIL FRAMEWORK ####
+EMAILIZER
+=========
+
+A Node.js module to compile html emails with inline styles. 
+-----------------------------------------------------------
+
+### Getting started
+
+To get started, install the emailizer module. I recommend installing it globally so you can simply call it from anywhere and watch a specific folder:
+
+```npm install emailizer -g```
 
 
-This framework uses Node.js to compile html emails with inline styles. The basic template is based of http://zurb.com/ink/
+### Creating an email from scratch
+
+You can also use emailizer as a framework to start a basic email template (this will create a folder called NAME in the current directory and copy a sample email - based on Ink, and open an http server to show the email in the browser):
+
+```emailizer create NAME```
 
 
-To get started, install the email compiler module as follows:
-
-```npm install ds-email-builder -g```
-
-```ds-email-builder source dest```
-
-Note: You can use both relative and absolute paths.
-
-The module now serves the templates on http://localhost:3729/emailpath.html as well as having the html written in the output dir.
+### Watching a directory
 
 
-*Writing the HTML*
+You can then use emailizer to watch an html email which has its CSS linked in the head and auto-render to an output folder:
 
-The rendered HTML is simply spit out in the browser - you can use the source to copy paste into MailChimp/Litmus or other testing platform.
+```emailizer watch ./SOURCE ./DEST```
 
-The images should be hosted either on S3 or MailChimp host.
+*Note: You can use both relative and absolute paths.*
 
-*Writing the CSS*
 
-Since the styles are parsed inline, feel free to add LESS or SASS and include the output CSS like you would in regular HTML. Be mindful that not all css properties parse well in html emails.
 
+### Dependencies
+
+* Ink [http://zurb.com/ink/]
+* Juice2 [https://www.npmjs.com/package/juice2]
+* node-watch [https://www.npmjs.com/package/node-watch]

@@ -1,6 +1,6 @@
 {
-  "name": "ds-email-builder",
-  "version": "1.0.7",
+  "name": "emailizer",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository":{
     "type":"git",
-    "url":"https://github.com/samueldelesque/email-builder.git"
+    "url":"https://github.com/samueldelesque/emailizer.git"
   },
   "bin": {
     "ds-email-builder": "bin/index.js"
