@@ -1,10 +1,11 @@
 {
   "name": "emailizer",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm link"
   },
   "author": {
     "name": "Samuel Delesque",
@@ -16,12 +17,11 @@
     "url": "https://github.com/samueldelesque/emailizer.git"
   },
   "bin": {
-    "ds-email-builder": "bin/index.js"
+    "emailizer": "bin/index.js"
   },
   "license": "ISC",
   "dependencies": {
     "juice2": "~1.3.x",
-    "node-static": "^0.7.x",
     "node-watch": "~0.3.x"
   }
 }

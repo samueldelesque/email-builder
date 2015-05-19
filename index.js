@@ -1,11 +1,8 @@
 var juice = require('juice2'),
 	fs = require('fs'),
 	http = require('http'),
-	// staticServer = require('node-static'),
 	Watch = require('node-watch'),
 	disregardFiles = [".DS_Store",".hide",".git",".deleteme","css","less","scss","sass"],
-	routes = {},
-	port = 3729,
 	basePath = process.cwd()+"/",
 	usage = ["watch","create"]
 
@@ -57,18 +54,6 @@ var Emailizer = {
 			})
 		})
 	},
-	// serveRender: function(){
-	// 	var s = this
-	// 	s.staticServer = new static.Server(s.settings.outputdir)
-
-	// 	http.createServer(function (req, res) {
-	// 		req.addListener('end', function () {
-	// 			s.staticServer.serve(req, res);
-	// 		}).resume()
-	// 	}).listen(port)
-
-	// 	console.log("App files are now served on port "+port);
-	// },
 
 
 	watch: function(inputdir,outputdir){
