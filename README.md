@@ -36,3 +36,7 @@ You can then use emailizer to watch an html email which has its CSS linked in th
 * node-watch [https://www.npmjs.com/package/node-watch]
 * node-static (could be removed, but allows to quickly display the email the browser)
 * fs-extra
+
+### Domani
+
+This module was brought to you by [Sam](http://samueldelesque.me) at [Domani Studios](http://domanistudios.com)
