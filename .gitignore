@@ -1,0 +1,41 @@
+# Global
+.DS_Store
+Thumbs.db
+.svn
+.settings
+.buildpath
+.project
+*.pem
+*.psd
+
+# NPM Builds
+node_modules/
+
+# Sublime Editor
+sftp-config.json
+*.sublime-settings
+*.sublime-workspace
+*.sublime-project
+
+# Wordpress
+html/wp-content/plugins/*.txt
+html/wp-content/cache/object/*
+!html/wp-content/cache/object/.keep
+html/wp-content/advanced-cache.php
+html/wp-content/db.php
+html/wp-content/object-cache.php
+
+# Magento
+html/app/etc/local.xml
+html/app/etc/local.xml.additional
+html/app/etc/local.xml.template
+html/var/log
+html/var/report
+html/var/session
+html/var/cache
+html/var/full_page_cache
+html/var/locks
+html/var/usimpleup
+html/var/resource_config.json
+html/errors/local.xml
+html/media
