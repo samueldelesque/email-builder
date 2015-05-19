@@ -31,7 +31,7 @@ var Emailizer = {
 
 	renderTemplate: function(path,then){
 		var s = this
-		juice(s.settings.inputdir+path, function(err, html) {
+		juice(s.settings.inputdir+path, {preserveMediaQueries: true}, function(err, html) {
 			if(err){console.log(path,"Path not found");}
 			fs.writeFile(s.settings.outputdir+path, html, function(err){
 				if(err){
