@@ -1,0 +1,307 @@
+/* Spacers */
+
+
+table.horizontal-space-1 {}
+table.horizontal-space-1 td {width:100%;height:18px;}
+
+table.horizontal-space-2 {}
+table.horizontal-space-2 td {width:100%;height:12px;}
+
+table.horizontal-space-3 {}
+table.horizontal-space-3 td {width:100%;height:6px;}
+
+/* EMAIL BLOCK .feature-1 */
+
+.feature-1 {
+	width:100%;
+}
+
+.featue-big-1 .feature-img {
+	width:580px; 
+	height:300px;
+	max-width:100%;
+}
+
+
+.feature-1 .feature-img .img {
+	width:580px; 
+	height:300px;
+	max-width:100%;
+}
+
+.feature-1 .feature-title h1, .feature-1 .feature-title h1.ExternalClasss {
+	font-size:30px;
+	line-height:36px;
+	text-transform: uppercase;
+	font-weight:bold;
+
+}
+
+.feature-1 .feature-title h2, .feature-1 .feature-title h2.ExternalClasss {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 26px;
+
+}
+
+
+/* EMAIL BLOCK .feature-2 */
+
+.feature-2 .one {
+	width:48%;
+}
+
+.feature-2 .one {
+	width:48%;
+}
+
+.feature-2 .middle {
+	width:4%;
+}
+
+.feature-2 .two {
+	width:45%;
+}
+
+.feature-2 img {margin:0 auto;}
+
+.feature-2 td.text h1 {
+	font-weight: bold;
+	font-size:24px;
+	line-height:26px;
+}
+
+.feature-2 td.text h2 {
+	font-size:18px;
+	line-height:20px;
+}
+
+.feature-2 td.text p {
+	font-size:14px;
+	line-height:16px;
+}
+
+@media only screen and (max-width: 600px) {
+	.feature-2 .one, .feature-2 .middle, .feature-2 .two {
+		width:100%;
+		display:block;
+	}
+}
+
+/* EMAIL BLOCK .callouts-2 (2 Callouts) */
+
+
+.callouts-2 .one, .callouts-2 .two {
+	width:50%;
+	padding:0 8px;
+}
+
+
+
+.callouts-2 h4 {
+	font-size:20px;
+	font-weight:bold;
+	padding:0 0 8px 0;
+	display:block;
+}
+
+.callouts-2 img {
+	display:block;
+	margin-bottom:10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.callouts-2 .one, .callouts-2 .two {
+		width:100% !important;
+		display:block !important;
+		padding:20px 0 !important;
+	}
+
+	.callouts-2 img {
+		width:100% !important;
+		display:block !important;
+	}
+
+
+}
+
+
+
+/* EMAIL BLOCK .callouts-3 (3 Callouts) */
+
+
+
+.callouts-3 .one, .callouts-3 .two, .callouts-3 .three {
+	width:30%;
+	padding:0 8px;
+}
+
+
+
+.callouts-3 h4 {
+	font-size:20px;
+	font-weight:bold;
+	padding:0 0 8px 0;
+	display:block;
+}
+
+.callouts-3 img {
+	display:block;
+	margin-bottom:10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.callouts-3 .one, .callouts-3 .two, .callouts-3 .three {
+		width:100% !important;
+		display:block !important;
+		padding:20px 0 !important;
+	}
+
+	.callouts-3 img {
+		width:100% !important;
+		display:block !important;
+	}
+
+
+}
+
+
+
+/* EMAIL BLOCK .callouts-4 (4 Callouts) */
+
+
+
+.callouts-4 .one, .callouts-4 .two, .callouts-4 .three, .callouts-4 .four  {
+	width:25%;
+	padding:0 8px;
+}
+
+
+
+.callouts-4 h4 {
+	font-size:20px;
+	font-weight:bold;
+	padding:0 0 8px 0;
+	display:block;
+}
+
+.callouts-4 img {
+	display:block;
+	margin-bottom:10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.callouts-4 .one, .callouts-4 .two, .callouts-4 .three, .callouts-4 .four {
+		width:46% !important;
+		display:inline-block !important;
+		padding:20px 2% !important;
+	}
+
+	.callouts-4 img {
+		width:100% !important;
+		display:block !important;
+	}
+
+
+}
+
+
+/* EMAIL BLOCK .order-info-1 */
+
+
+.order-info-1 {}
+
+.order-info-1 .order-title {
+	font-size:18px;
+	font-weight:bold;
+
+}
+
+.order-info-1 .item-info td {
+	padding:6px 0;
+}
+
+.order-info-1 .item-info .item h5 {
+	font-size:16px;
+	line-height:18px;
+	text-align: left;
+}
+
+.order-info-1 .item-info .item h6 {
+	color:#999;
+	font-size:12px;
+	font-weight:bold;
+	text-align: left;
+}
+
+.order-info-1 .item-info .price {
+	text-align: right;
+}
+
+.order-info-1 .order-title td {
+	width:100%;
+	padding:10px 0;
+	border-bottom:1px solid #111;
+}
+.order-info-1 .order-title h2 {
+	font-size:18px;
+	font-weight:bold;
+	text-align: left;
+}
+
+.order-info-1 .tally p {
+	text-align: right;
+}
+
+.order-info-1 .final {
+	width:100%;
+	padding:10px 0;
+	border-top:1px dotted #444;
+	display:block;
+}
+.order-info-1 .final td {
+	width:100%;
+	display:block;
+}
+
+.order-info-1 .final p {
+	text-align: right;
+	width:100%;
+}
+
+.order-info-1 .shipping-info, .order-info-1 .shipping-info td {
+	width:100%;
+	display:block;
+}
+
+.order-info-1 .shipping-info p {
+	width:100%;
+	text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.order-info-1 tbody, .order-info-1 tr, .order-info-1 td {
+		display:block !important;
+		width:100% !important;
+	}
+
+	.order-info-1 .item {
+		width:100% !important;
+		display:block !important;
+		padding-top:10px;
+	}
+	.order-info-1 .item h4, .order-info-1 .item h5 {
+		width:100% !important;
+	}
+
+	.order-info-1 .price {
+		width:100% !important;
+		display:block !important;
+		padding-bottom: 10px !important;
+  	    border-bottom: 1px solid #EEE !important;
+	}
+}
