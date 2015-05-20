@@ -49,18 +49,16 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 
 .feature-2 .one {
 	width:48%;
+	padding-right:4%;
 }
 
 .feature-2 .one {
 	width:48%;
 }
 
-.feature-2 .middle {
-	width:4%;
-}
-
 .feature-2 .two {
 	width:45%;
+	padding-left:4%;
 }
 
 .feature-2 img {
@@ -86,9 +84,10 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 }
 
 @media only screen and (max-width: 600px) {
-	.feature-2 .one, .feature-2 .middle, .feature-2 .two {
-		width:100%;
-		display:block;
+	.feature-2 .one, .feature-2 .two {
+		width:100% !important;
+		display:block !important;
+		padding:0 !important;
 	}
 
 	table[class="body"] .feature-2 img {
