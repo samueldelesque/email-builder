@@ -1,5 +1,6 @@
 var juice = require('juice2'),
 	Watch = require('node-watch'),
+	fs = require('fs-extra'),
 	disregardFiles = [".DS_Store",".hide",".git",".deleteme","css","less","scss","sass"]
 
 function appendTrailingSlash(dir){

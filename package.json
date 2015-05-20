@@ -1,10 +1,11 @@
 {
 	"name": "emailizer",
-	"version": "1.1.14",
+	"version": "1.1.16",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "mocha",
+		"prepublish": "mocha"
 	},
 	"author": {
 		"name": "Samuel Delesque",
