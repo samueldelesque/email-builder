@@ -1,7 +1,7 @@
 {
 	"name": "emailizer",
-	"version": "1.1.16",
-	"description": "",
+	"version": "1.1.17",
+	"description": "An email framework to create responsive emails and inline all css styles.",
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha",
@@ -9,8 +9,8 @@
 	},
 	"author": {
 		"name": "Samuel Delesque",
-		"email": "sdelesque@domanistudios.com",
-		"url": "http://domanistudios.com/"
+		"email": "hello@samueldelesque.me",
+		"url": "http://samueldelesque.com/"
 	},
 	"repository": {
 		"type": "git",
