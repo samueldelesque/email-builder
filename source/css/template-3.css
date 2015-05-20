@@ -90,6 +90,10 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 		width:100%;
 		display:block;
 	}
+
+	table[class="body"] .feature-2 img {
+		width:100% !important;
+	}
 }
 
 /* EMAIL BLOCK .callouts-2 (2 Callouts) */
@@ -124,7 +128,7 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 		padding:20px 0 !important;
 	}
 
-	.callouts-2 img {
+	table[class="body"] .callouts-2 img {
 		width:100% !important;
 		display:block !important;
 	}
@@ -167,7 +171,7 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 		padding:20px 0 !important;
 	}
 
-	.callouts-3 img {
+	table[class="body"] .callouts-3 img {
 		width:100% !important;
 		display:block !important;
 	}
@@ -210,7 +214,7 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 		padding:20px 2% !important;
 	}
 
-	.callouts-4 img {
+	table[class="body"] .callouts-4 img {
 		width:100% !important;
 		display:block !important;
 	}
