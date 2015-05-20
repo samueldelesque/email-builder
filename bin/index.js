@@ -3,6 +3,8 @@
 var Emailizer = require('../emailizer'),
 	basePath = process.cwd()+"/",
 	staticServer = require('node-static'),
+	fs = require('fs-extra'),
+	http = require('http'),
 	open = require("open"),
 	module_path = __dirname.replace("bin",""),
 	usage = ["watch","create"],
@@ -22,6 +24,8 @@ function serveStatic(dir,port){
 			server.serve(req, res);
 		}).resume()
 	}).listen(port)
+
+	console.log("Serving ",dir,"on",port)
 }
 
 if(!process.argv[2] || process.argv[2] == "help" || usage.indexOf(process.argv[2]) == -1){

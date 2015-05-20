@@ -1,6 +1,4 @@
 var juice = require('juice2'),
-	fs = require('fs-extra'),
-	http = require('http'),
 	Watch = require('node-watch'),
 	disregardFiles = [".DS_Store",".hide",".git",".deleteme","css","less","scss","sass"]
 
