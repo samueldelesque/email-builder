@@ -63,7 +63,11 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 	width:45%;
 }
 
-.feature-2 img {margin:0 auto;}
+.feature-2 img {
+	margin:0 auto;
+	width:271px;
+	height:150px;
+}
 
 .feature-2 td.text h1 {
 	font-weight: bold;
@@ -108,6 +112,8 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 .callouts-2 img {
 	display:block;
 	margin-bottom:10px;
+	width:274px;
+	height:142px;
 }
 
 
@@ -149,6 +155,8 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 .callouts-3 img {
 	display:block;
 	margin-bottom:10px;
+	width:172px;
+	height:92px;
 }
 
 
@@ -190,6 +198,8 @@ table.horizontal-space-3 td {width:100%;height:6px;}
 .callouts-4 img {
 	display:block;
 	margin-bottom:10px;
+	width:129px;
+	height:67px;
 }
 
 
